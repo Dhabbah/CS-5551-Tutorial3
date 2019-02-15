@@ -1,0 +1,11 @@
+/* Header
+-------------------------------------*/
+header {
+  position: relative;
+  overflow: hidden;
+}
+header .carousel{
+  position: relative;
+  height: 747px;
+  width: 100%;
+}
