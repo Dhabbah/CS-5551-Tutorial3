@@ -1,63 +1,41 @@
+button{
+  margin: 10px 9px 9px 7px;
+}
+.fa{
+  margin:0px 5px;
+}
+.top-nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  z-index: 9;
+  background:darkcyan;
+  border-top: 1px solid #0F4571;
+  border-bottom: 1px solid #0F4571;
+}
+
 a.nav-link {
-  color: #ffffff !important;
+  color: white;
   display: inline-block;
   font-weight: bold;
   padding: 10px 1px 10px 0px;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
+  border-bottom: 1px solid transparent;}
 a.nav-link:hover {
-  color: #ffffff !important;
-  border-bottom: 2px solid #e32b21;
-  border-bottom-left-radius: 0px;
-}
-
-a.head-line {
   color: #0F4571;
-  display: inline-block;
-  font-weight: bold;
-  padding: 10px 1px 10px 0px;
-  text-decoration: none;
-  border-bottom: 2px solid #757575;
-  border-bottom-left-radius: 30px;
-  width: 120px;
-}
+  border-bottom: 2px solid white;
+  border-bottom-left-radius:0px;}
 
-a.head-line:hover {
-  border-bottom: 2px solid #757575;
-  border-bottom-left-radius: 50px;
-}
-.nav-brand {
-  color: #ffffff;
-}
-/*Navbar Toogle*/
-.nav-toggler span {
+/*Navbar toggle*/
+ .top-nav .navbar-toggler span {
   display: block;
   width: 22px;
   height: 2px;
   border-radius: 1px;
-  background: #fff;
+  background: #000;
 }
-
-.nav-toggler span + span {
+ .top-nav .navbar-toggler span + span {
   margin-top: 4px;
 }
 /**/
-@media (max-width: 991px) {
-
-  a.nav-link {
-    color: #fff;
-    background-color: #008cba;
-    border: 1px solid #d7d5f6;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .header-nav .navbar-nav .nav-link:hover {
-    background-color: #0F4571;
-    border: 1px solid #d7d5f6;
-  }
-
-}
-
