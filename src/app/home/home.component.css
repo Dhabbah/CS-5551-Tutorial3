@@ -1,0 +1,29 @@
+/* Header
+-------------------------------------*/
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+header .carousel{
+  position: relative;
+  height: 747px;
+}
+
+header .event-info {
+  height: 200px;
+  width: 946px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  margin-left: -473px;
+}
+
+header .event-info .event-info-date {
+  height: 200px;
+  width: 556px;
+  background-color: rgba(255, 255, 255, 0.9);
+  float: right;
+  text-align: right;
+  padding: 35px 30px 0 0;
+}
