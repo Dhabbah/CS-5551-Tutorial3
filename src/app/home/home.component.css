@@ -1,5 +1,3 @@
-/* Header
--------------------------------------*/
 header {
   position: relative;
   overflow: hidden;
@@ -8,22 +6,59 @@ header {
 header .carousel{
   position: relative;
   height: 747px;
+  width: 100%;
 }
 
-header .event-info {
+header .welcome {
   height: 200px;
   width: 946px;
   position: absolute;
-  top: 250px;
-  left: 50%;
-  margin-left: -473px;
-}
+  top: 350px;
 
-header .event-info .event-info-date {
+}
+header .welcome .welcome-info {
   height: 200px;
   width: 556px;
   background-color: rgba(255, 255, 255, 0.9);
   float: right;
-  text-align: right;
-  padding: 35px 30px 0 0;
+  text-align: center;
+  padding: 80px 30px 0 0;
+}
+
+header .welcome .welcome-info h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #11a8ab;
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+  header .welcome {
+    height: auto;
+    width: 100%;
+    top: 205px;
+    left: 50%;
+    margin-left: -50%;
+  }
+
+  header .welcome .welcome-info {
+    height: auto;
+    width: 100%;
+    float: none;
+    text-align: center;
+    display: block;
+    padding: 30px 15px;
+  }
+
+  header .welcome .welcome-info h1 {
+    margin: 12px 0 15px 0;
+  }
+}
+/* Small devices (480px and down) */
+@media (max-width: 480px) {
+  header .welcome {
+    top: 85px;
+  }
 }
