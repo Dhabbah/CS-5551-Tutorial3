@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { NutritionSearchComponent } from './nutritionsearch/nutritionsearch.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 
@@ -13,6 +14,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     HeaderComponent,
     LoginComponent,
+    NutritionSearchComponent,
     RegisterComponent,
     HomeComponent
   ],

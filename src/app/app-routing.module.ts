@@ -4,12 +4,14 @@ import { HomeComponent } from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import {LoginComponent} from './login/login.component';
+import {NutritionSearchComponent} from './nutritionsearch/nutritionsearch.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'nutritionsearch', component: NutritionSearchComponent}
 ];
 
 @NgModule({
