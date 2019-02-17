@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-register',
@@ -7,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   submitted: any;
-
-  constructor() { }
+  FirstName: any;
+  LastName: any;
+  UserName: any;
+  Password: any;
+  constructor( private  Auth: AuthService, private router: Router) { }
 
   ngOnInit() {
 
@@ -19,19 +24,13 @@ export class RegisterComponent implements OnInit {
       localStorage.setItem('LastName', (document.getElementById('LastName') as HTMLInputElement).value);
       localStorage.setItem('UserName', (document.getElementById('Username') as HTMLInputElement).value);
       localStorage.setItem('Password', (document.getElementById('Password') as HTMLInputElement).value);
-      // localStorage.clear();
-      console.log(localStorage);
-      // alert('Login incorrect');
-      // @ts-ignore
-     // window.location.href('../login');
+      this.router.navigate(['/login']);
     } else {alert('Your browser does not support local storage.'); }
   }
 
   clear() {
     localStorage.clear();
+    this.router.navigate(['/login']);
   }
 
-  show() {
-    console.log(localStorage);
-  }
 }
