@@ -24,25 +24,31 @@
           </div>
           <div id="right-side" class="col-md-8 py-5 border bg-white">
             <h4 class="pb-4 text-black-50">Please fill with your details</h4>
-            <form>
+            <form class="form" name="form" action="./home" method="post">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <input id="First Name" name="First Name" placeholder="First Name" class="form-control" type="text">
+                  <input id="FirstName" name="FirstName" placeholder="FirstName" ngModel= "user.FirstName" class="form-control" required="required" type="text">
                 </div>
                 <div class="form-group col-md-6">
-                  <input id="Last Name" name="Last Name" placeholder="Last Name" class="form-control" type="text">
+                  <input id="LastName" name="LastName" placeholder="LastName" ngModel= "user.LastName" class="form-control" required="required" type="text">
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-md-6">
-                  <input id="Username" name="Username" placeholder="Username" class="form-control" required="required" type="text">
+                  <input id="Username" name="Username" placeholder="Username" ngModel= "username" class="form-control" required="required" type="text">
                 </div>
                 <div class="form-group col-md-6">
-                  <input id="Password" name="Password" placeholder="Password" class="form-control" required="required" type="text">
+                  <input id="Password" name="Password" placeholder="Password" ngModel= "password" class="form-control" required="required" type="text">
                 </div>
               </div>
               <div class="form-row">
-                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" (click)="store()">Submit</button>
+                <a routerLink="/login" class="btn btn-link">Cancel</a>
+                <button type="button" class="btn btn-primary" (click)="show()">show</button>
+                <button type="button" class="btn btn-primary" (click)="clear()">clear</button>
+                <br>
+                <button type="button" class="btn btn-primary" (click)="store()" ng-disabled="form.$invalid"
+                >Submit</button>
               </div>
             </form>
           </div>
