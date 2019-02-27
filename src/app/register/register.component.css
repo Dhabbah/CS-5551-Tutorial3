@@ -1,15 +1,11 @@
 /* Header
 -------------------------------------*/
 header {
-  position: relative;
+  position: center;
   overflow: hidden;
 }
 
-header .carousel{
-  position: relative;
-  height: 747px;
-  width: 100%;
-}
+
 
 #registration {
   margin: 0 0 0 0 ;

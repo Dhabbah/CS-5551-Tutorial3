@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CS-5551-Tutorial3';
+  constructor() {}
 }

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
    this.Auth.login(this.Auth.Username, this.Auth.Password);
    if (this.Auth.Username === this.UserName && this.Auth.Password === this.Password) {
      this.Auth.LoggedIn(true);
-     this.router.navigate(['/nutritionsearch']);
+     this.router.navigate(['/home']);
     } else {alert('Please Enter a valid account.'); }
   }
 }

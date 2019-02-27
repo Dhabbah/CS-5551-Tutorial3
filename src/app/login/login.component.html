@@ -1,5 +1,6 @@
 <br><br><br>
-<div id="login">
+
+<div id="login" >
   <div class="container border">
     <div class="row justify-content-center align-items-center">
       <div id="column" class="col-auto">
@@ -12,14 +13,14 @@
             </div>
             <div>
               <label for="password" class="text-info">Password:</label><br>
-              <input type="text" name="password" id="password" class="form-control">
+              <input type="password" name="password" id="password" class="form-control">
             </div>
             <div>
               <label class="text-info"><span>Remember me</span> <span><input name="remember-me" type="checkbox"></span></label><br>
               <button  name="submit" class="btn btn-info btn-md" value="" (click)="LogIn()">Submit</button>
             </div>
             <div class="text-right">
-              <a href="/register" class="text-info">Register here</a>
+              <a routerLink="/register" class="text-info">Register here</a>
             </div>
           </form>
         </div>

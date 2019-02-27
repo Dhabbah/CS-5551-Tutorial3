@@ -8,7 +8,6 @@ import {AuthService} from '../auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  submitted: any;
   FirstName: any;
   LastName: any;
   UserName: any;
