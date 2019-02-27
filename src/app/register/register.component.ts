@@ -24,6 +24,7 @@ export class RegisterComponent implements OnInit {
       localStorage.setItem('UserName', (document.getElementById('Username') as HTMLInputElement).value);
       localStorage.setItem('Password', (document.getElementById('Password') as HTMLInputElement).value);
       this.router.navigate(['/login']);
+      location.reload();
     } else {alert('Your browser does not support local storage.'); }
   }
 

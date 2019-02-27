@@ -13,11 +13,7 @@ export class LoginComponent implements OnInit {
   constructor(private  Auth: AuthService,  private router: Router) { }
 
   ngOnInit() {
-   // localStorage.setItem('FirstName', (document.getElementById('username') as HTMLInputElement).value);
-//  const username = localStorage.getItem('username');
-  // const password = localStorage.getItem('password')
-  // console.log(this.Auth.login());
- // document.getElementById('Username') as HTMLInputElement).value);
+
   }
 
   LogIn(e) {
