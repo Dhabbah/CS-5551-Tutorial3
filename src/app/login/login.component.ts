@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
    const logintarget = e.target;
    this.UserName = logintarget.querySelector('#username').value;
    this.Password = logintarget.querySelector('#password').value;
-   this.Auth.login(this.Auth.Username, this.Auth.Password);
    if (this.Auth.Username === this.UserName && this.Auth.Password === this.Password) {
      this.Auth.LoggedIn(true);
      this.router.navigate(['/home']);

@@ -8,29 +8,23 @@ import {AuthService} from '../auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  FirstName: any;
-  LastName: any;
-  UserName: any;
-  Password: any;
   constructor( private  Auth: AuthService, private router: Router) { }
-
+  FirstName;
+  LastName;
+  UserName;
+  Password;
   ngOnInit() {
 
   }
   store() {
     if (localStorage) {
-      localStorage.setItem('FirstName', (document.getElementById('FirstName') as HTMLInputElement).value);
-      localStorage.setItem('LastName', (document.getElementById('LastName') as HTMLInputElement).value);
-      localStorage.setItem('UserName', (document.getElementById('Username') as HTMLInputElement).value);
-      localStorage.setItem('Password', (document.getElementById('Password') as HTMLInputElement).value);
-      this.router.navigate(['/login']);
-      location.reload();
+      localStorage.setItem('FirstName', this.FirstName);
+      localStorage.setItem('LastName', this.LastName);
+      localStorage.setItem('UserName', this.UserName);
+      localStorage.setItem('Password', this.Password);
+      if ((this.FirstName != null) && (this.LastName != null) && (this.UserName != null) && (this.Password != null)) {
+        alert('Registration Successful'); this.router.navigate(['/login']);  location.reload();
+      } else {alert('Please complete the form'); }
     } else {alert('Your browser does not support local storage.'); }
   }
-
-  clear() {
-    localStorage.clear();
-    this.router.navigate(['/login']);
-  }
-
 }

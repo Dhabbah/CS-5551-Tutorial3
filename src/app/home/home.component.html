@@ -1,19 +1,22 @@
 <br>
+
 <div id="search" >
   <div class="container border">
     <div class="row justify-content-center align-items-center">
       <div class="col-auto">
         <div class="col-auto">
           <br>
+          <div class="border-bottom">
+          <h2 class="text-black-50">Welcome:</h2><h2 class="text-danger"> {{FirstName}} {{LastName}} </h2>
+          </div>
             <h3 class="text-center text-info">Please write down the name of the food that you want to get information about</h3>
             <div>
               <label for = "food-name" class="text-info">Food Name:</label><br>
-              <input type="text" name="food-name" id="food-name" class="form-control">
+              <input type="text" name="food-name" id="food-name" class="form-control" [(ngModel)]="food">
             </div>
             <br>
             <div>
               <button class="btn btn-info btn-md" (click)="getNutrition()">Submit</button>
-              <button class="btn btn-info btn-md" (click)="show()">show</button>
             </div>
             <br>
         </div>
@@ -42,6 +45,10 @@
             <tr>
               <td>Serving weight in grams</td>
               <td>{{result.hits[0].fields.nf_serving_weight_grams}}</td>
+            </tr>
+            <tr>
+              <td>Audio</td>
+              <td></td>
             </tr>
             </tbody>
           </table>
