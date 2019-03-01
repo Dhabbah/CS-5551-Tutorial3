@@ -24,13 +24,8 @@ export class HomeComponent implements OnInit {
         .subscribe((result) => {
           this.result = result;
           console.log(this.result);
+          this.result2 = 'http://api.voicerss.org/?key=386cda37d86f4ea3a22ad8ad860a4165&hl=en-us&src=' + this.food;
         });
-      this.GetHttp.get('https://api.nutritionix.com/v1_1/search/' +
-        this.food + '?results=0:1&fields=*&appId=1c1ccd2c&appKey=cc82e01a3d45d384c04f28511568c367')
-        .subscribe((result) => {
-          this.result2 = result;
-          console.log(this.result2);
-        });
-    } else {alert('Please type the food name'); }
-}
+       }
+  }
 }
