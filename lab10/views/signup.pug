@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        title Signup Page
+        link(rel="stylesheet" href="/css/styles.css")
+        script(src="/js/script.js")
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        script(src='/js/bootstrap.min.js')
+
+    body
+        h1.text-warning Welcome to Lab9
+        
+        #registration.py-5
+.container
+    .row
+      .col-md-4.py-5.bg-danger.text-white.text-center
+        .left-side
+          h2.py-3 Registration Form
+      #right-side.col-md-8.py-5.border.bg-white
+        h4.pb-4.text-black-50 Please fill with your details
+        form.form(name='SignUpForm')
+          .row
+            .form-group.col-md-6
+              input#FirstName.form-control(name='FirstName', placeholder='First Name', [(ngmodel)]='FirstName', type='text')
+            .form-group.col-md-6
+              input#LastName.form-control(name='LastName', placeholder='Last Name', [(ngmodel)]='LastName', type='text')
+          .row
+            .form-group.col-md-6
+              input#Username.form-control(name='Username', placeholder='Username', [(ngmodel)]='UserName', type='text')
+            .form-group.col-md-6
+              input#Password.form-control(name='Password', placeholder='Password', [(ngmodel)]='Password', type='password')
+          .form-row.centered
+            button.btn.btn-primary(type='button', onclick="store()") Submit
+            button.btn.btn-danger(type='button', onclick="Cancel()") Cancel

@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Service 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="show()">
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-input id="state"  type="text"  name="state"  placeholder="State" [(ngModel)]="state" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input id="city" type="city"  name="city" placeholder="City" [(ngModel)]="city" required></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button fill="solid" expand="block" color="dark" (click)="show()">show</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <form *ngIf="result">
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <a>Name: </a>
+            {{result.current_observation.display_location.city}}, {{result.current_observation.display_location.state}} <img src="{{result.current_observation.icon_url}}">
+          </ion-item>
+          <ion-item>
+            <a>Wind: </a>
+            {{result.current_observation.wind_string}}
+          </ion-item>
+          <ion-item>
+            <a>Temperature: </a>
+            {{result.current_observation.temp_f}} F : {{result.current_observation.temp_c}} C
+          </ion-item>
+          <ion-item>
+            <table border>
+              <tr>
+                <td>Pressure: </td>
+                <td>{{result.current_observation.pressure_in}}</td>
+                <td>Humidity: </td>
+                <td>{{result.current_observation.relative_humidity}}</td>
+              </tr>
+              <tr>
+                <td>Time</td>
+                <td>{{result2.hourly_forecast[0].FCTTIME.civil}}</td>
+                <td>{{result2.hourly_forecast[1].FCTTIME.civil}}</td>
+                <td>{{result2.hourly_forecast[2].FCTTIME.civil}}</td>
+              </tr>
+
+              <tr>
+                <td>condition</td>
+                <td>{{result2.hourly_forecast[0].condition}}</td>
+                <td>{{result2.hourly_forecast[1].condition}}</td>
+                <td>{{result2.hourly_forecast[2].condition}}</td>
+              </tr>
+
+              <tr>
+                <td>Feelslike</td>
+                <td>{{result2.hourly_forecast[0].feelslike.english}}</td>
+                <td>{{result2.hourly_forecast[1].feelslike.english}}</td>
+                <td>{{result2.hourly_forecast[2].feelslike.english}}</td>
+              </tr>
+
+              <tr>
+                <td>Temp</td>
+                <td>{{result2.hourly_forecast[0].temp.english}}</td>
+                <td>{{result2.hourly_forecast[1].temp.english}}</td>
+                <td>{{result2.hourly_forecast[2].temp.english}}</td>
+              </tr>
+
+            </table>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

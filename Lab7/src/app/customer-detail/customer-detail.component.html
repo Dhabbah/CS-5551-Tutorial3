@@ -1,0 +1,27 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/customer']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title><h2>{{customer.customerFirstName}} {{customer.customerLastName}}</h2></mat-card-title>
+    <mat-card-subtitle>{{customer.customerEmail}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>Customer ID:</dt>
+      <dd>{{customer.customerID}}</dd>
+      <dt>Customer First Name:</dt>
+      <dd>{{customer.customerFirstName}}</dd>
+      <dt>Customer Last Name:</dt>
+      <dd>{{customer.customerLastName}}</dd>
+      <dt>Customer Phone Number:</dt>
+      <dd>{{customer.customerPhoneNumber}}</dd>
+      <dt>Update Date:</dt>
+      <dd>{{customer.updated_date | date}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/customer-edit', customer._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteCustomer(customer._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>

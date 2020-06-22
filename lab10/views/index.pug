@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        title Login Page
+        link(rel="stylesheet" href="/css/styles.css")
+        script(src="/js/script.js")
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        script(src='/js/bootstrap.min.js')
+
+    body
+        h1.text-warning Welcome to Lab9
+        
+.container
+    .row
+      .col-md-4.py-5.bg-primary.text-white.text-center
+        .left-side
+          h2.py-3 Login Form
+      #right-side.col-md-8.py-5.border.bg-white
+        h4.pb-4.text-black-50 Please type your email address as a username and password
+        form.form(name='LogInForm')
+          .row
+            .form-group.col-md-6
+              input#Username.form-control(name='Username', placeholder='Username', [(ngmodel)]='UserName', type='text')
+            .form-group.col-md-6
+              input#Password.form-control(name='Password', placeholder='Password', [(ngmodel)]='Password', type='password')
+          .form-row
+            button.btn.btn-primary(type='button', onclick="LogIn()") Login
+            button.btn.btn-danger(type='button', onclick="SignupPage()") register
+
+    <br/><br/>
+
+.container
+    .row
+      table.table.hidden(id='element')
+        thead.table-danger
+          tr
+           th(scope='col') Username
+           th(scope='col') First Name
+           th(scope='col') Last Name
+        tbody.bg-white
+            tr
+            td#labuser
+            td#labFirstName
+            td#labLastName
+
+
+

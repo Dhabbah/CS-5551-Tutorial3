@@ -1,0 +1,48 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/customer']">
+    <mat-icon>list</mat-icon>
+  </a>
+</div>
+<form [formGroup]="customerForm" (ngSubmit)="onFormSubmit(customerForm.value)">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Customer ID" formControlName="customerID"
+           [errorStateMatcher]="">
+    <mat-error>
+      <span *ngIf="!customerForm.get('customerID').valid && customerForm.get('customerID').touched">Please type the customer ID</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Customer First Name" formControlName="customerFirstName"
+           [errorStateMatcher]="">
+    <mat-error>
+      <span *ngIf="!customerForm.get('customerFirstName').valid && customerForm.get('customerFirstName').touched">Please type customer first name</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Customer Last Name" formControlName="customerLastName"
+           [errorStateMatcher]="">
+    <mat-error>
+      <span *ngIf="!customerForm.get('customerLastName').valid && customerForm.get('customerLastName').touched">Please type customer Last name</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <textarea matInput placeholder="Customer Email" formControlName="customerEmail"
+              [errorStateMatcher]=""></textarea>
+    <mat-error>
+      <span *ngIf="!customerForm.get('customerEmail').valid && customerForm.get('customerEmail').touched">Please type customer Email</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Customer Phone Number" formControlName="customerPhoneNumber"
+           [errorStateMatcher]="">
+    <mat-error>
+      <span *ngIf="!customerForm.get('customerPhoneNumber').valid && customerForm.get('customerPhoneNumber').touched">Please type customer phone number</span>
+    </mat-error>
+  </mat-form-field>
+
+  <div class="button-row">
+    <button type="submit" [disabled]="!customerForm.valid" mat-raised-button color="primary">
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+</form>
