@@ -1,0 +1,66 @@
+
+<table><tr><td>
+  <hello name="{{ name }}"></hello>
+  <p>
+    Ckick the button!
+  </p>
+  State code: <input type="text" [(ngModel)]="state"><br>
+  City name: <input type="text" [(ngModel)]="city"><br><br>
+  <button (click)="show()">Show</button>
+
+</td></tr></table>
+
+<div *ngIf="result">
+  <table>
+    <tr>
+      <td>{{result.current_observation.display_location.city}}, {{result.current_observation.display_location.state}} <img src="{{result.current_observation.icon_url}}"></td>
+      <td>Wind: </td>
+      <td colspan="4">{{result.current_observation.wind_string}}</td>
+    </tr>
+    <tr>
+      <td>Pressure: </td>
+      <td>{{result.current_observation.pressure_in}}</td>
+      <td>Humidity: </td>
+      <td>{{result.current_observation.relative_humidity}}</td>
+      <td>Temperature: </td>
+      <td  colspan="1">{{result.current_observation.temp_f}} F : {{result.current_observation.temp_c}} C</td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>{{result2.hourly_forecast[0].FCTTIME.civil}}</td>
+      <td>{{result2.hourly_forecast[1].FCTTIME.civil}}</td>
+      <td>{{result2.hourly_forecast[2].FCTTIME.civil}}</td>
+      <td>{{result2.hourly_forecast[3].FCTTIME.civil}}</td>
+      <td>{{result2.hourly_forecast[4].FCTTIME.civil}}</td>
+    </tr>
+
+    <tr>
+      <td>condition</td>
+      <td>{{result2.hourly_forecast[0].condition}}</td>
+      <td>{{result2.hourly_forecast[1].condition}}</td>
+      <td>{{result2.hourly_forecast[2].condition}}</td>
+      <td>{{result2.hourly_forecast[3].condition}}</td>
+      <td>{{result2.hourly_forecast[4].condition}}</td>
+    </tr>
+
+    <tr>
+      <td>Feelslike</td>
+      <td>{{result2.hourly_forecast[0].feelslike.english}}</td>
+      <td>{{result2.hourly_forecast[1].feelslike.english}}</td>
+      <td>{{result2.hourly_forecast[2].feelslike.english}}</td>
+      <td>{{result2.hourly_forecast[3].feelslike.english}}</td>
+      <td>{{result2.hourly_forecast[4].feelslike.english}}</td>
+    </tr>
+
+    <tr>
+      <td>Temp</td>
+      <td>{{result2.hourly_forecast[0].temp.english}}</td>
+      <td>{{result2.hourly_forecast[1].temp.english}}</td>
+      <td>{{result2.hourly_forecast[2].temp.english}}</td>
+      <td>{{result2.hourly_forecast[3].temp.english}}</td>
+      <td>{{result2.hourly_forecast[4].temp.english}}</td>
+    </tr>
+
+  </table>
+
+</div>
